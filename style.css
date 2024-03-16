@@ -1,0 +1,10 @@
+body{
+  background-color: rgb(182, 181, 181);
+}
+style
+  .container {
+    display: flex;
+    justify-content
+    :align-items; position: 100px; 
+    height: 100vh;
+  }

@@ -1,0 +1,6 @@
+CREATE TABLE cadastro (
+    ID INT PRIMARY KEY IDENTITY,
+    nome VARCHAR(30) NOT NULL,
+    cel VARCHAR(11) NOT NULL,
+    email VARCHAR(30) NOT NULL,
+);
