@@ -1,10 +1,18 @@
 body{
-  background-color: rgb(182, 181, 181);
+  background-color: rgb(136, 136, 136);
 }
-style
-  .container {
-    display: flex;
-    justify-content
-    :align-items; position: 100px; 
-    height: 100vh;
+
+  div{
+    color: rgb(27, 27, 253);
   }
+  .tocenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+  }
+  .scaled{
+    transform: scale(1.10);
+    width: 30%;
+  }
+  
