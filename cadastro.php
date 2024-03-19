@@ -2,6 +2,7 @@
 
 $email = $_POST["E-mail"]
 $senha = MD5($_POST)["Senha"]
+$connect = mysql_connect("local_host","root@localhost");
 $db = mysql_select_db("cadastro.sql");
 $query_select = "SELECT login FROM usuarios WHERE login = "$email"";
 $select = mysql_query($query_select,$connect);

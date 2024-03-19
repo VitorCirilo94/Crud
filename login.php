@@ -2,7 +2,7 @@
 $email = $_POST["E-mail"];
 $acessar = $_POST["Acessar"];
 $senha = md5($_POST["Senha"])
-$connect = mysql_connect("nome_do_servidor","nome_de_usuario","senha");
+$connect = mysql_connect("local_host","root@localhostot");
 $db = mysql_select_db("cadastro.sql");
 
   if(isset($acessar)) {
