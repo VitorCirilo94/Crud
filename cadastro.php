@@ -1,12 +1,12 @@
 <?php
 
-$email = $_POST["E-mail"]
-$senha = MD5($_POST)["Senha"]
-$connect = mysql_connect("local_host","root@localhost");
-$db = mysql_select_db("cadastro.sql");
+$email = $_POST["E-mail"];
+$senha = MD5($_POST)["Senha"];
+$connect = mysqli_connect("localhost","root");
+$db = mysqli_select_db("cadastro.sql");
 $query_select = "SELECT login FROM usuarios WHERE login = "$email"";
-$select = mysql_query($query_select,$connect);
-$array = mysql_fetch_array($select);
+$select = mysqli_query($query_select,$connect);
+$array = mysqli_fetch_array($select);
 $logarray = $array["E-mail"];
 
 if($email == ""|| $email == null){
