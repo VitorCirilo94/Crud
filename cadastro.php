@@ -1,37 +1,14 @@
 <?php
 
-$email = $_POST["E-mail"]
-$senha = MD5($_POST)["Senha"]
-$db = mysql_select_db("cadastro.sql");
-$query_select = "SELECT login FROM usuarios WHERE login = "$email"";
-$select = mysql_query($query_select,$connect);
-$array = mysql_fetch_array($select);
-$logarray = $array["E-mail"];
+$connect = mysqli_connect("localhost","root","123456","agenda");
+$query_select = "SELECT nome FROM agenda";
+$query_select2 = "INSERT INTO `agenda` (`nome`, `telefone`) VALUES ('".$_POST['email']."', '".$_POST['senha']."')";
+mysqli_query($connect,$query_select2);
+$select = mysqli_query($connect,$query_select);
+$array = mysqli_fetch_array($select);
+var_dump($array);
 
-if($email == ""|| $email == null){
-    echo"<script language="javascript" type"text/javascript">
-    alert("O Campo E-mail deve ser preenchido")window.location.href="cadastro.html";<\scriot>";
-}
-else{
-    if($logarray == $email){
 
-        echo"<script language="javascript" type="text/javascript">
-        alert("Esse email já existe");window.location.href="cadastro.html";</script>;
-        die();
-    }
-else{
-    $query = "INSERT INTO usuarios (email, senha) VALUES ("$email","$senha")";
-    $insert = mysql_query($query,$connect);
-
-    if($insert){
-        echo"<script language="javascript" type="texte/javascript">
-        alert("Usuário cadastrado com sucesso");window.location.href="email.html"</script>;
-    }
-    else{
-        echo"<script languagem="javascript" typ="text/javascript">
-        alert("Não foi possivel cadastrar esse usuário")window.location.href="cadastro.html"</script>"
-    }
-}
 
 ?>
 
